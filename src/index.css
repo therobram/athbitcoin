@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 28 93% 53%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 28 93% 53%;
+
+    /* Sidebar theming */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 28 93% 53%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 28 93% 53%;
+  }
+}
+
+/* Bitcoin Theme Colors */
+:root {
+  --bitcoin-orange: #f7931a;
+  --bitcoin-orange-dark: #e07e0c;
+  --bitcoin-blue: #0d1b34;
+  --bitcoin-blue-light: #172c4f;
+}
+
+@layer utilities {
+  .text-bitcoin-orange {
+    color: var(--bitcoin-orange);
+  }
+  
+  .bg-bitcoin-orange {
+    background-color: var(--bitcoin-orange);
+  }
+  
+  .border-bitcoin-orange {
+    border-color: var(--bitcoin-orange);
+  }
+  
+  .from-bitcoin-orange {
+    --tw-gradient-from: var(--bitcoin-orange) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(247 147 26 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bitcoin-blue);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--bitcoin-orange);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bitcoin-orange-dark);
+  }
+}
+
